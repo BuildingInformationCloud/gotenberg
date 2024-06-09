@@ -1,0 +1,57 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="build/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+    <deployment type="dockerfile">
+      <settings>
+        <option name="imageTag" value="gotenberg:thinkbic" />
+        <option name="buildArgs">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="GOLANG_VERSION" />
+              <option name="value" value="1.22" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="DOCKER_REPOSITORY" />
+              <option name="value" value="gotenberg" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="GOTENBERG_VERSION" />
+              <option name="value" value="snapshot" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="GOTENBERG_USER_GID" />
+              <option name="value" value="1001" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="GOTENBERG_USER_UID" />
+              <option name="value" value="1001" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="NOTO_COLOR_EMOJI_VERSION" />
+              <option name="value" value="v2.042" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="PDFTK_VERSION" />
+              <option name="value" value="v3.3.3" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="GOLANGCI_LINT_VERSION" />
+              <option name="value" value="v1.59.0" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
+        <option name="containerName" value="gotenberg-thinkbic" />
+        <option name="contextFolderPath" value="." />
+        <option name="portBindings">
+          <list>
+            <DockerPortBindingImpl>
+              <option name="containerPort" value="3000" />
+              <option name="hostPort" value="3000" />
+            </DockerPortBindingImpl>
+          </list>
+        </option>
+        <option name="sourceFilePath" value="build/Dockerfile" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
